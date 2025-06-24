@@ -12,20 +12,12 @@ This project is part of the final assessment for the Meta Back-End Developer Pro
 - `/tableau/LittleLemon_Analysis.twbx` — Tableau workbook containing data analysis
 - `README.md` — This file
 
----
 
-##  Tools Used
 
-- **MySQL Workbench** — Database design and data modeling
-- **Python (mysql.connector)** — Database procedures and automation
-- **Tableau Public** — Data visualization and insights
-- **GitHub** — Project version control and submission
-
----
 
 ##  Entity-Relationship (ER) Diagram
 
-![Screenshot (5)](https://github.com/user-attachments/assets/bd69350a-aac8-4108-a68f-7931a3e3db9b)
+(https://github.com/user-attachments/assets/bd69350a-aac8-4108-a68f-7931a3e3db9b)
 
 
 
@@ -39,31 +31,9 @@ This project is part of the final assessment for the Meta Back-End Developer Pro
 -  `AddBooking()` — Adds a new booking for a customer
 -  `CancelBooking()` — Removes a booking by ID
 
-**Output Screenshot:**
-![Python Terminal](images/Python_Procedure_Execution.png)
 
----
 
-##  Tableau Reports
 
-Key dashboards include:
-- Total Bookings by Date
-- Revenue by Menu Item
-- Cancellations Trend
-- Most Frequent Customers
-
-![Dashboard](images/Tableau_Dashboard.png)
-
----
-
-##  Insights
-
-- Bookings peak during weekends
-- Top menu item: Grilled Salmon
-- Booking cancellations increase during holidays
-- Top 3 customers account for 42% of bookings
-
----
 
 ##  How to Run
 
@@ -71,10 +41,4 @@ Key dashboards include:
 2. Open `booking_procedures.py` and run from your terminal
 3. Open `LittleLemon_Analysis.twbx` in Tableau
 
----
 
-##  Author
-
-Your Name  
-GitHub: [YourGitHubProfileLink]  
-LinkedIn: [Optional]
