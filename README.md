@@ -25,7 +25,9 @@ This project is part of the final assessment for the Meta Back-End Developer Pro
 
 ##  Entity-Relationship (ER) Diagram
 
-![ER Diagram](images/ER_Diagram.png)
+![Screenshot (5)](https://github.com/user-attachments/assets/bd69350a-aac8-4108-a68f-7931a3e3db9b)
+
+
 
 ---
 
