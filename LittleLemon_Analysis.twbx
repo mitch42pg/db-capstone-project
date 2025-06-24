@@ -1,0 +1,65 @@
+# Creating a sample SQL schema file for the Little Lemon Database project
+
+sql_schema = """
+-- Little Lemon Database Schema
+
+CREATE DATABASE IF NOT EXISTS LittleLemonDB;
+USE LittleLemonDB;
+
+-- Customers Table
+CREATE TABLE Customers (
+    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(100),
+    Phone VARCHAR(15),
+    Email VARCHAR(100)
+);
+
+-- Tables Table
+CREATE TABLE Tables (
+    TableID INT AUTO_INCREMENT PRIMARY KEY,
+    Capacity INT,
+    Location VARCHAR(50)
+);
+
+-- Bookings Table
+CREATE TABLE Bookings (
+    BookingID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    TableID INT,
+    BookingDate DATE,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (TableID) REFERENCES Tables(TableID)
+);
+
+-- MenuItems Table
+CREATE TABLE MenuItems (
+    ItemID INT AUTO_INCREMENT PRIMARY KEY,
+    ItemName VARCHAR(100),
+    Price DECIMAL(10,2)
+);
+
+-- Orders Table
+CREATE TABLE Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    BookingID INT,
+    TotalAmount DECIMAL(10,2),
+    FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
+);
+
+-- OrderDetails Table
+CREATE TABLE OrderDetails (
+    DetailID INT AUTO_INCREMENT PRIMARY KEY,
+    OrderID INT,
+    ItemID INT,
+    Quantity INT,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ItemID) REFERENCES MenuItems(ItemID)
+);
+"""
+
+# Saving the SQL schema to a file
+schema_path = "/mnt/data/LittleLemonDB.sql"
+with open(schema_path, "w") as f:
+    f.write(sql_schema)
+
+schema_path
